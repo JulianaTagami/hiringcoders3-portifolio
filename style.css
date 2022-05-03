@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Armata', sans-serif;
+}
+
+body {
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f64f59, #c471ed, #bce3ec);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f64f59, #c471ed, #d8e6ea); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+}
+
+a:hover {
+    opacity: 40%;
+    transition: 500ms;
+}
+
+header {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    border-bottom: 2px solid rgb(93, 190, 220);
+    box-shadow: 1px 1px 10px 1px rgb(254, 254, 254);
+    border-bottom: 5px rgb(242, 213, 213);
+    margin-bottom: 45px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#arrow {
+    font-size: 45px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+#animation {
+    transition: 300ms;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active {
+    display: block !important;
+}
+
+.copyright {
+    font-size: 12px;
+    text-align: center;
+}
+
+.form {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.form input {
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+.form button {
+    width: 15%;
+    background: linear-gradient(to right, #f3424a, #c471ed, #e0e8ea);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: rgb(36, 36, 38);
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 1s ease-out;
+    text-align: left;
+}
+
+.form button:hover {
+    background-position: left bottom;
+    color: aliceblue;
+    text-align: right;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: space-between;
+        font-size: 30px ;
+    }
+    .container h1{
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .form input {
+        display: flex;
+       width: 100%;
+       margin-bottom: 5px;
+    }
+    .form button{
+        display: flex;
+        width: 100%;
+    }
+    #about {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        width: 100%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

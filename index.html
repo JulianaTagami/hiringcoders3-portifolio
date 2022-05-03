@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portiólio | Juliana Tagami</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Armata&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/jt.svg" alt="logotipo meu nome" width="150px">
+        </div>
+        <ul>
+            <li>
+                <a href="www.linkedin.com/in/juliana-tagami" target="_blank">
+                    <img src="img/in.png" alt="linkedin" width="65px">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/JulianaTagami" target="_blank">
+                    <img src="img/git.png" alt="github">
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="container">
+            <div class="name">
+                <h1>Juliana Tagami | Developer Front-End</h1>
+                <h3>WELCOME</h3>
+            </div>
+
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-sort-down"></i>
+            </div>
+
+            <div style="display: none" id="about">
+                <p>Civil Engineer in career transition, bringing all my knowledge of logical reasoning and project management with Technology.
+                </p>
+            </div>
+
+            <div class="form">
+                <form action="">
+                    <input type="text" placeholder="Your Best E-mail">
+                    <button>Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
+
+    <footer>
+        <p class="copyright">&copy; Copyright Hiring Coders</p><p class="copyright"> BOOTCAMP VTEX | 2022</p>
+    </footer>
+    
+</body>
+</html>
